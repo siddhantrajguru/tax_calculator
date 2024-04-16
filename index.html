@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div id="calculator">
+        <h1>Tax Calculator</h1>
+        <div class="input-group">
+            <label for="grossAnnualIncome">Enter Gross Annual Income:</label>
+            <input type="number" id="grossAnnualIncome" placeholder="Enter gross annual income" />
+            <div id="grossAnnualIncome-error" class="error">Please enter a valid gross annual income.</div>
+        </div>
+        <div class="input-group">
+            <label for="extraIncome">Enter Extra Income:</label>
+            <input type="number" id="extraIncome" placeholder="Enter extra income form other source" />
+            <div id="extraIncome-error" class="error">Please enter a valid extra income.</div>
+        </div>
+        <div class="input-group">
+            <label for="ageGroup">Enter Age Group:</label>
+            <select id="ageGroup">
+                <option value="">Select age group</option>
+                <option value="under40">Under 40</option>
+                <option value="fortyToSixty">40 to 60</option>
+                <option value="over60">Over 60</option>
+            </select>
+            <div id="ageGroup-error" class="error">Please select an age group.</div>
+        </div>
+        <div class="input-group">
+            <label for="deductions">Enter Total Applicable Deductions:</label>
+            <input type="number" id="deductions" placeholder="Add total applicable deductions" />
+            <div id="deductions-error" class="error">Please enter a valid total applicable deductions.</div>
+        </div>
+        <button id="calculate">Submit</button>
+        <div id="result" style="display:none;">
+            <p>Your overall income will be: <span id="taxAmount">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
